@@ -1,115 +1,169 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Layout>
+      <section className="text-center py-20">
+        <h2 className="text-4xl font-heading text-primary mb-4">
+          El sueño de vivir en España, ahora más cerca que nunca.
+        </h2>
+        <p className="text-lg mb-6 max-w-xl mx-auto">
+          Acompañamos tu proceso migratorio con asesoría, comunidad y apoyo experto.
+        </p>
+        <a
+          href="#"
+          className="bg-success text-white text-lg px-6 py-3 rounded-xl shadow hover:bg-green-600"
+        >
+          Quiero empezar mi camino
+        </a>
+      </section>
+
+      <section className="py-16 bg-lightBg">
+        <h3 className="text-3xl font-heading text-center mb-10 text-primary">
+          Todo lo que recibirás al ser parte de Hispano Club
+        </h3>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h4 className="text-xl font-semibold mb-2">🕑 Consultoría personalizada</h4>
+            <p>30 minutos al mes adaptados a tus necesidades: finanzas, cultura, empleo, y más.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h4 className="text-xl font-semibold mb-2">💸 Descuentos exclusivos</h4>
+            <p>Hasta 25% de descuento en trámites como NIE, empadronamiento y gestoría.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h4 className="text-xl font-semibold mb-2">📅 Sesiones privadas</h4>
+            <p>Reunión mensual para planificar tu próximo paso con un asesor de confianza.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow">
+            <h4 className="text-xl font-semibold mb-2">📩 Soporte por email</h4>
+            <p>Preguntas rápidas, dudas urgentes: siempre estamos disponibles para ayudarte.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <h3 className="text-3xl font-heading text-center text-primary mb-12">
+          Elige tu plan 360
+        </h3>
+        <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto px-4">
+          {/* Plan STARTER */}
+          <div className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h4 className="text-2xl font-semibold mb-2">STARTER</h4>
+            <p className="text-3xl font-bold text-primary mb-4">49€/mes</p>
+            <ul className="mb-6 space-y-2 text-sm">
+              <li>✅ 30 minutos de consultoría</li>
+              <li>✅ 10% de descuento en trámites</li>
+              <li>✅ 1 sesión privada</li>
+              <li>✉️ Soporte por email</li>
+            </ul>
+            <a href="#" className="block text-center bg-success text-white py-2 rounded-lg hover:bg-green-600">
+              Empezar con Starter
+            </a>
+          </div>
+
+          {/* Plan PRO */}
+          <div className="border-2 border-primary rounded-xl p-6 shadow-md bg-lightBg hover:shadow-lg transition">
+            <h4 className="text-2xl font-semibold mb-2">PRO</h4>
+            <p className="text-3xl font-bold text-primary mb-4">99€/mes</p>
+            <ul className="mb-6 space-y-2 text-sm">
+              <li>✅ 90 minutos de consultoría</li>
+              <li>✅ 15% de descuento</li>
+              <li>✅ 3 sesiones privadas</li>
+              <li>📞 Soporte telefónico</li>
+            </ul>
+            <a href="#" className="block text-center bg-primary text-white py-2 rounded-lg hover:bg-darkPrimary">
+              Empezar con Pro
+            </a>
+          </div>
+
+          {/* Plan PRIME */}
+          <div className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h4 className="text-2xl font-semibold mb-2">PRIME</h4>
+            <p className="text-3xl font-bold text-primary mb-4">199€/mes</p>
+            <ul className="mb-6 space-y-2 text-sm">
+              <li>✅ 200 minutos de consultoría</li>
+              <li>✅ 25% de descuento</li>
+              <li>✅ Sesiones ilimitadas</li>
+              <li>💬 WhatsApp VIP 24/7</li>
+            </ul>
+            <a href="#" className="block text-center bg-success text-white py-2 rounded-lg hover:bg-green-600">
+              Empezar con Prime
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <h3 className="text-3xl font-heading text-center text-primary mb-12">
+          En 3 pasos, resuelve lo que te quita el sueño
+        </h3>
+        <div className="grid gap-10 md:grid-cols-3 max-w-5xl mx-auto px-6 text-center">
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+            <div className="text-4xl mb-4">🧭</div>
+            <h4 className="text-xl font-semibold mb-2">1. Elige tu plan</h4>
+            <p>Starter, Pro o Prime — selecciona el que más se ajuste a tus necesidades.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+            <div className="text-4xl mb-4">📅</div>
+            <h4 className="text-xl font-semibold mb-2">2. Agenda tu sesión</h4>
+            <p>Usa nuestro calendario para coordinar tus asesorías con profesionales certificados.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+            <div className="text-4xl mb-4">🚀</div>
+            <h4 className="text-xl font-semibold mb-2">3. Ahorra y avanza</h4>
+            <p>Recibe descuentos automáticos, asesoría mensual y más beneficios conforme creces.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto text-center px-4">
+          <h3 className="text-3xl font-heading text-primary mb-4">
+            Únete y recibe nuestra Guía Esencial + 5% de descuento
+          </h3>
+          <p className="text-lg mb-8">
+            Descarga gratis: “7 Errores al Empadronarse en España (y cómo evitarlos)” + descuento exclusivo en tu primer mes.
+          </p>
+          <form className="space-y-4 md:flex md:space-y-0 md:space-x-4 justify-center">
+            <input
+              type="text"
+              placeholder="Tu nombre"
+              className="w-full md:w-1/3 px-4 py-3 border rounded-lg shadow-sm"
+            />
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              className="w-full md:w-1/3 px-4 py-3 border rounded-lg shadow-sm"
+            />
+            <button
+              type="submit"
+              className="w-full md:w-auto bg-success text-white px-6 py-3 rounded-lg shadow hover:bg-green-600"
+            >
+              Obtener guía + 5% dto
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg text-center">
+  <div className="max-w-2xl mx-auto px-6">
+    <h3 className="text-3xl font-heading text-primary mb-6">
+      Solo 100 plazas disponibles: empieza tu vida en España con el pie derecho
+    </h3>
+    <p className="mb-8 text-lg">
+      ¿Sigues perdiendo tiempo con trámites infinitos o entrevistas fallidas?
+      Con tu membresía 360, tendrás acceso directo a expertos, ahorros garantizados y resultados reales.
+    </p>
+    <a
+      href="#"
+      className="inline-block bg-primary text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-darkPrimary transition"
+    >
+      Comenzar Ahora →
+    </a>
+  </div>
+</section>
+
+    </Layout>
   );
 }
