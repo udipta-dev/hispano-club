@@ -3,22 +3,35 @@ import Layout from "../components/Layout";
 export default function Home() {
   return (
     <Layout>
-      <section className="text-center py-20">
-        <h2 className="text-4xl font-heading text-primary mb-4">
-          El sueño de vivir en España, ahora más cerca que nunca.
-        </h2>
-        <p className="text-lg mb-6 max-w-xl mx-auto">
-          Acompañamos tu proceso migratorio con asesoría, comunidad y apoyo experto.
-        </p>
-        <a
-          href="#"
-          className="bg-success text-white text-lg px-6 py-3 rounded-xl shadow hover:bg-green-600"
-        >
-          Quiero empezar mi camino
-        </a>
+      <section className="bg-primary text-white py-12 md:py-16">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center px-6">
+          {/* Left: Text + CTA */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-heading mb-4 leading-tight">
+              El sueño de vivir en España, ahora más cerca que nunca.
+            </h2>
+            <p className="text-lg mb-6">
+              Acompañamos tu proceso migratorio con asesoría, comunidad y apoyo experto.
+            </p>
+            <a
+              href="#"
+              className="inline-block bg-success text-white text-base px-5 py-3 rounded-lg shadow hover:bg-green-600"
+            >
+              Quiero empezar mi camino
+            </a>
+          </div>
+
+          {/* Right: Placeholder for graphic/image */}
+          <div
+            className="h-48 md:h-64 rounded-xl bg-cover bg-center shadow"
+            style={{
+              backgroundImage: "url('https://raw.githubusercontent.com/udipta-dev/geojson-host/refs/heads/main/Madrid%20Expat.png')"
+            }}
+          ></div>
+        </div>
       </section>
 
-      <section className="py-16 bg-lightBg">
+      <section className="py-12 bg-lightBg">
         <h3 className="text-3xl font-heading text-center mb-10 text-primary">
           Todo lo que recibirás al ser parte de Hispano Club
         </h3>
@@ -42,7 +55,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <h3 className="text-3xl font-heading text-center text-primary mb-12">
           Elige tu plan 360
         </h3>
@@ -94,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-lightBg">
+      <section className="py-12 bg-lightBg">
         <h3 className="text-3xl font-heading text-center text-primary mb-12">
           En 3 pasos, resuelve lo que te quita el sueño
         </h3>
@@ -117,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h3 className="text-3xl font-heading text-primary mb-4">
             Únete y recibe nuestra Guía Esencial + 5% de descuento
@@ -146,23 +159,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-lightBg text-center">
-  <div className="max-w-2xl mx-auto px-6">
-    <h3 className="text-3xl font-heading text-primary mb-6">
-      Solo 100 plazas disponibles: empieza tu vida en España con el pie derecho
-    </h3>
-    <p className="mb-8 text-lg">
-      ¿Sigues perdiendo tiempo con trámites infinitos o entrevistas fallidas?
-      Con tu membresía 360, tendrás acceso directo a expertos, ahorros garantizados y resultados reales.
-    </p>
-    <a
-      href="#"
-      className="inline-block bg-primary text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-darkPrimary transition"
-    >
-      Comenzar Ahora →
-    </a>
-  </div>
-</section>
+      <section className="py-12 bg-lightBg text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h3 className="text-3xl font-heading text-primary mb-6">
+            Solo 100 plazas disponibles: empieza tu vida en España con el pie derecho
+          </h3>
+          <p className="mb-8 text-lg">
+            ¿Sigues perdiendo tiempo con trámites infinitos o entrevistas fallidas?
+            Con tu membresía 360, tendrás acceso directo a expertos, ahorros garantizados y resultados reales.
+          </p>
+          <a
+            href="#"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-darkPrimary transition"
+          >
+            Comenzar Ahora →
+          </a>
+        </div>
+      </section>
 
     </Layout>
   );
