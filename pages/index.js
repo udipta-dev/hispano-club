@@ -13,7 +13,8 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source
-            src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/Madrid%20Background%20Video.mp4"
+            src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/madrid-background-video_BvKycoGG.mp4"
+    type="video/mp4"
             type="video/mp4"
           />
         </video>
