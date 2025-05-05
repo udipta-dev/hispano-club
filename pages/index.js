@@ -3,31 +3,38 @@ import Layout from "../components/Layout";
 export default function Home() {
   return (
     <Layout>
-      <section className="bg-primary text-white py-12 md:py-16">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center px-6">
-          {/* Left: Text + CTA */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-heading mb-4 leading-tight">
-              El sueño de vivir en España, ahora más cerca que nunca.
-            </h2>
-            <p className="text-lg mb-6">
-              Acompañamos tu proceso migratorio con asesoría, comunidad y apoyo experto.
-            </p>
-            <a
-              href="#"
-              className="inline-block bg-success text-white text-base px-5 py-3 rounded-lg shadow hover:bg-green-600"
-            >
-              Quiero empezar mi camino
-            </a>
-          </div>
+      <section className="relative h-[500px] text-white overflow-hidden">
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source
+            src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/Madrid%20Background%20Video.mp4"
+            type="video/mp4"
+          />
+        </video>
 
-          {/* Right: Placeholder for graphic/image */}
-          <div
-            className="h-48 md:h-64 rounded-xl bg-cover bg-center shadow"
-            style={{
-              backgroundImage: "url('https://raw.githubusercontent.com/udipta-dev/geojson-host/refs/heads/main/Madrid%20Expat.png')"
-            }}
-          ></div>
+        {/* Optional dark overlay */}
+        <div className="absolute inset-0 bg-black/40 z-10" />
+
+        {/* Hero content */}
+        <div className="relative z-20 flex flex-col justify-center items-start h-full max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-heading mb-4 leading-tight">
+            El sueño de vivir en España, ahora más cerca que nunca.
+          </h2>
+          <p className="text-lg mb-6 max-w-md">
+            Acompañamos tu proceso migratorio con asesoría, comunidad y apoyo experto.
+          </p>
+          <a
+            href="#"
+            className="inline-block bg-success text-white text-base px-5 py-3 rounded-lg shadow hover:bg-green-600"
+          >
+            Quiero empezar mi camino
+          </a>
         </div>
       </section>
 
