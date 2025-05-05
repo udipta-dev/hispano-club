@@ -6,18 +6,18 @@ export default function Home() {
       <section className="relative h-[500px] text-white overflow-hidden">
         {/* Video background */}
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source
-            src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/madrid-background-video_BvKycoGG.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  poster="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/Madrid%20background.png"
+  className="absolute inset-0 w-full h-full object-cover z-0"
+>
+  <source
+    src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/madrid-background-video_BvKycoGG.mp4"
     type="video/mp4"
-            type="video/mp4"
-          />
-        </video>
+  />
+</video>
 
         {/* Optional dark overlay */}
         <div className="absolute inset-0 bg-black/40 z-10" />
