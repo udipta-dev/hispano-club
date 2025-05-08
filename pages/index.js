@@ -6,18 +6,18 @@ export default function Home() {
       <section className="relative h-[500px] text-white overflow-hidden">
         {/* Video background */}
         <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  poster="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/Madrid%20background.png"
-  className="absolute inset-0 w-full h-full object-cover z-0"
->
-  <source
-    src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/madrid-background-video_BvKycoGG.mp4"
-    type="video/mp4"
-  />
-</video>
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/Madrid%20background.png"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source
+            src="https://cdn.jsdelivr.net/gh/udipta-dev/geojson-host@main/madrid-background-video_BvKycoGG.mp4"
+            type="video/mp4"
+          />
+        </video>
 
         {/* Optional dark overlay */}
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -139,6 +139,22 @@ export default function Home() {
       </section>
 
       <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h3 className="text-3xl font-heading text-primary mb-10">Nuestros Aliados</h3>
+          <p className="text-grayText mb-8 max-w-2xl mx-auto">
+            Trabajamos junto a organizaciones y marcas comprometidas con apoyar a los migrantes hispanos en España.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+            {["logo1", "logo2", "logo3", "logo4", "logo5", "logo6", "logo7", "logo8"].map((logo, i) => (
+              <div className="p-4 flex items-center justify-center">
+                <img src={`/logos/${logo}.png`} alt={logo} className="w-20 h-20 object-contain mx-auto" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-lightBg">
         <div className="max-w-3xl mx-auto text-center px-4">
           <h3 className="text-3xl font-heading text-primary mb-4">
             Únete y recibe nuestra Guía Esencial + 5% de descuento
@@ -167,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-lightBg text-center">
+      <section className="py-12 bg-white text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h3 className="text-3xl font-heading text-primary mb-6">
             Solo 100 plazas disponibles: empieza tu vida en España con el pie derecho
