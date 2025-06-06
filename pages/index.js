@@ -1,8 +1,11 @@
 import Layout from "../components/Layout";
+import EmailPopup from "../components/EmailPopup";
 
 export default function Home() {
   return (
     <Layout>
+
+      <EmailPopup />
       <section className="relative h-[500px] text-white overflow-hidden">
         {/* Video background */}
         <video
